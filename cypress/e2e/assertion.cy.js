@@ -6,9 +6,9 @@ describe('Assertions Demo - Cypress Example Site', () => {
     cy.url().should('include', 'example.cypress.io')
 
     // Assertion 2: Page content check
-    cy.contains('Kitchen Sink').should('be.visible')
+    cy.contains('h1', 'Kitchen Sink').should('be.visible')
 
-    // Assertion 3: Commands text check
-    cy.contains('Commands').should('be.visible')
+    // Verifies the dropdown link exists and is visible
+    cy.get('a.dropdown-toggle').should('be.visible').and('contain', 'Commands');
   })
 })
