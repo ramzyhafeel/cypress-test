@@ -3,7 +3,7 @@ describe('Assertions Demo - Cypress Example Site', () => {
     cy.visit('https://example.cypress.io')
 
     // Assertion 1: URL check
-    cy.url().should('include', 'example.cypress.io')
+    cy.url("https://example.cypress.io").should('include', 'example.cypress.io')
 
     // Assertion 2: Page content check
     cy.contains('h1', 'Kitchen Sink').should('be.visible')
